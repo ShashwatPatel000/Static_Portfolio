@@ -6,6 +6,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -227,6 +228,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
+  height: 100%;
 }
 
 img {
@@ -2095,12 +2097,15 @@ textarea.w-input, textarea.w-select {
 }
 
 body {
-  background-color: var(--background);
+  /* background-color: var(--background); */
+  background-color: #1e1e1e;
   color: var(--accent);
   font-family: Rethink Sans, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 128%;
+  
+  
 }
 
 h1 {
@@ -2401,6 +2406,7 @@ img {
   padding-right: 12px;
   display: flex;
   overflow: hidden;
+   background-color: #1e1e1e;
 }
 
 .content {
@@ -3496,7 +3502,7 @@ img {
 
   .navigation {
     height: auto;
-    overflow: visible;
+    overflow-y: auto;
   }
 
   .menu {
