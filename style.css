@@ -2097,7 +2097,7 @@ textarea.w-input, textarea.w-select {
 }
 
 body {
-  /* background-color: var(--background); */
+  background-color: var(--background);
   background-color: #1e1e1e;
   color: var(--accent);
   font-family: Rethink Sans, sans-serif;
