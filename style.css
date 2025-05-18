@@ -2,12 +2,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  height: 100%;
 }
 
 body {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
 }
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
@@ -2057,7 +2059,7 @@ textarea.w-input, textarea.w-select {
 }
 
 :root {
-  --background: #fbf6f6;
+  --background: #808080;
   --accent: #808080;
   --accent-opacity--12: #8080801f;
   --white: #fefdfd;
@@ -2165,29 +2167,35 @@ img {
   grid-row-gap: 0px;
   grid-template-rows: auto;
   grid-template-columns: minmax(320px, 1fr) 3fr;
+  display: grid;
+  min-height: 100vh;
 }
 
 .navigation {
   z-index: 100;
   flex-flow: column;
   height: 100vh;
+  /* height: auto */
   padding: 12px;
   display: flex;
   position: sticky;
   top: 0;
   overflow: hidden;
+  flex-direction: column; 
+  justify-content: space-between;
+  overflow-y: auto;
 }
 
 .menu {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  border: 1px solid var(--accent-opacity--12);
-  background-color: var(--white);
-  border-radius: 24px;
-  flex-flow: column;
-  flex: 1;
-  display: flex;
-  overflow: scroll;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid var(--accent-opacity--12);
+    background-color: var(--white);
+    border-radius: 24px;
+    flex-flow: column;
+    flex: 1;
+    display: flex;
+    overflow: scroll;
 }
 
 .menu-header {
@@ -3181,6 +3189,14 @@ img {
   display: none;
 }
 
+@media screen and (max-width: 767px) {
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 .about-card-image-wrapper {
   border: 1px solid var(--accent-opacity--8);
   border-radius: 50%;
@@ -3754,13 +3770,6 @@ img {
   }
 }
 
-
-
-
-
-
-/* ########################################### */
-
 <style>
 .wf-force-outline-none[tabindex="-1"]:focus {
   outline: none;
@@ -3803,10 +3812,6 @@ img {
   }
 }
 </style>
-
-
-
-
 
 
 <style>
